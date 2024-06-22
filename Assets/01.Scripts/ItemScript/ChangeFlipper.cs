@@ -9,17 +9,18 @@ public class ChangeFlipper : MonoBehaviour
     [SerializeField] private float maxScale = default;
     [SerializeField] private float itmeDurationTime = default;
 
-    private GameObject leftPlipper = null;
-    private GameObject rightPlipper = null;
+    private Vector3 oringLeftPinScale = Vector3.zero;
+    private Vector3 oringRightPinScale = Vector3.zero;
 
     private void Start()
     {
-        
+        oringLeftPinScale = GameObject.FindWithTag("LeftPin").transform.localScale;
+        oringRightPinScale = GameObject.FindWithTag("RightPin").transform.localScale;
     }
 
     private void SetSamllFlipper()
     {
-
+        
     }
 
     private void SetLargeFlipper()
@@ -27,13 +28,13 @@ public class ChangeFlipper : MonoBehaviour
 
     }
 
-    private IEnumerator Co_SetSamllFlipper()
-    {
+    //private IEnumerator Co_SetSamllFlipper()
+    //{
 
-    }
+    //}
 
-    private IEnumerator Co_SetLargeFlipper()
-    {
+    //private IEnumerator Co_SetLargeFlipper()
+    //{
 
-    }
+    //}
 }
