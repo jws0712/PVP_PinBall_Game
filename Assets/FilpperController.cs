@@ -4,29 +4,28 @@ using UnityEngine;
 
 public class FilpperController : MonoBehaviour
 {
-    [SerializeField] Rigidbody2D rightFlipper = null;
-    [SerializeField] Rigidbody2D leftFlipper = null;
+    [SerializeField] Rigidbody2D rightFlipper, leftFlipper = null;
+    [SerializeField] private float flipperPower = default;
 
     private void Update()
     {
-        leftFlipper.AddTorque(25f);
-
-        if(Input.GetKey(KeyCode.J))
-        {
-            rightFlipper.AddTorque(-25f);
-        }
-        else
-        {
-            rightFlipper.AddTorque(20f);
-        }
-
         if (Input.GetKey(KeyCode.J))
         {
-            leftFlipper.AddTorque(25f);
+            rightFlipper.AddTorque(-(flipperPower));
         }
         else
         {
-            leftFlipper.AddTorque(-20f);
+            rightFlipper.AddTorque(flipperPower);
         }
+        if(Input.GetKey(KeyCode.F))
+        {
+            leftFlipper.AddTorque(flipperPower);
+        }
+        else
+        {
+            leftFlipper.AddTorque(-(flipperPower));
+        }
+
+        
     }
 }
