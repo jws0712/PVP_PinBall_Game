@@ -38,7 +38,7 @@ public class ItemSpawner_p2 : MonoBehaviour
 
     private void Update()
     {
-        if (GameManager.Instance.isOnItem_p2 == false)
+        if (GameManager1.Instance.isOnItem == false)
         {
             int itemInxdex = Random.Range(0, itemArray.Length);
             int itemSpawnPosIndex = Random.Range(0, itemSpawnPosArray.Length);
@@ -49,7 +49,7 @@ public class ItemSpawner_p2 : MonoBehaviour
 
             //ws.Send("type: item," + "item: " + itemArray[itemInxdex].gameObject + "," + "x: " + itemSpawnPosArray[itemSpawnPosIndex].position.x + "," + "y: " + itemSpawnPosArray[itemSpawnPosIndex].position.y);
             
-            GameManager.Instance.isOnItem_p2 = true;
+            GameManager1.Instance.isOnItem = true;
         }
     }
 

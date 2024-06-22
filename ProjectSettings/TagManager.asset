@@ -9,6 +9,7 @@ TagManager:
   - LeftPin
   - Wall
   - Obstacle
+  - Ball2
   layers:
   - Default
   - TransparentFX

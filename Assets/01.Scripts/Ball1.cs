@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Ball : MonoBehaviour
+public class Ball1 : MonoBehaviour
 {
     [SerializeField] private float oringBounciness = default;
     [SerializeField] private float bouncinessDamage = default;
@@ -18,7 +18,7 @@ public class Ball : MonoBehaviour
         if (collision.gameObject.layer == LayerMask.NameToLayer("DeadZone"))
         {
             Destroy(gameObject);
-            GameManager.Instance.isOnBall = false;
+            GameManager1.Instance.isOnBall = false;
         }
     }
 }
