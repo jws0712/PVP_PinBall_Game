@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ChangeFlipper : MonoBehaviour
+public class ChangeFlipperSize : MonoBehaviour
 {
     [SerializeField] private float oringScale = default;
     [SerializeField] private float minScale = default;
@@ -17,12 +17,6 @@ public class ChangeFlipper : MonoBehaviour
     public float xpos;
     public float ypos;
     public Vector2 newposition;
-    public SetBlind AppearBlind;
-
-    private void Start()
-    {
-        PosSet();
-    }
 
     private void Update()
     {
@@ -91,25 +85,13 @@ public class ChangeFlipper : MonoBehaviour
         SetFlipperSize(oringScale);
     }
 
-    void PosSet()
-    {
-        xpos = Random.Range(-160, 160);
-        ypos = Random.Range(-200, 270);
-        newposition = new Vector2(xpos, ypos);
-        transform.position = newposition;
-    }
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.gameObject.tag == "Ball")
         {
             SetFlipperEvent();
-            PosSet();
-        }
-        else if (collision.gameObject.tag == "Wall" || collision.gameObject.tag == "Obstacle")
-        {
-            PosSet();
-            Debug.Log("¥Í¿Ω");
+            Destroy(gameObject);
+            GameManager.Instance.isOnItem = false;
         }
     }
 }
