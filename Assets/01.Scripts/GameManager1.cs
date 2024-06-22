@@ -2,14 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameManager : MonoBehaviour
+public class GameManager1 : MonoBehaviour
 {
     [SerializeField] private float spawnDelay = default;
     [SerializeField] private float ballSpawnPower = default;
     [SerializeField] private Transform ballSpawnPoint = null;
     [SerializeField] private GameObject ballPreFab = null;
 
-    public static GameManager Instance;
+    public static GameManager1 Instance;
 
     [HideInInspector]
     public bool isOnBall = default;
@@ -23,14 +23,9 @@ public class GameManager : MonoBehaviour
         Instance = this;
     }
 
-    private void Start()
-    {
-        AudioManager.instance.PlayMusic("BackGround");
-    }
-
     private void Update()
     {
-        GameObject ballobject = GameObject.FindWithTag("Ball");
+        GameObject ballobject = GameObject.FindWithTag("Ball2");
 
 
         if (ballobject == null && isOnBall == false)

@@ -552,6 +552,56 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1559271466}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &429547939
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 429547940}
+  - component: {fileID: 429547941}
+  m_Layer: 0
+  m_Name: GameManger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &429547940
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 429547939}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -640, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1083640427}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &429547941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 429547939}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06fb38ff538e2ba479093f5ff58df6c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnDelay: 2
+  ballSpawnPower: 1000
+  ballSpawnPoint: {fileID: 770911432}
+  ballPreFab: {fileID: 1464525422968001401, guid: 9e487c3c22c9ff44c8a106bc8a8be018, type: 3}
+  isOnBall: 0
+  isOnItem: 0
 --- !u!1 &494179174
 GameObject:
   m_ObjectHideFlags: 0
@@ -1478,6 +1528,7 @@ Transform:
   - {fileID: 2123503634}
   - {fileID: 1559271466}
   - {fileID: 108540264}
+  - {fileID: 429547940}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1116699985
@@ -2338,6 +2389,7 @@ Transform:
   - {fileID: 1339278770}
   - {fileID: 915420141}
   - {fileID: 58061093}
+  - {fileID: 5922883202342559211}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1559271465
@@ -2427,6 +2479,8 @@ MonoBehaviour:
   sfxClipArray:
   - name: Bound
     clip: {fileID: 8300000, guid: c380470ae93a37946ba2fd8de8de588f, type: 3}
+  - name: BackGround
+    clip: {fileID: 8300000, guid: b4309faf9557d7540b477fd869be9d6a, type: 3}
 --- !u!1 &1860356786
 GameObject:
   m_ObjectHideFlags: 0
@@ -3320,12 +3374,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8361404154978136761}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1506658244}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!60 &6003304781611129767
 PolygonCollider2D:
@@ -3514,11 +3568,8 @@ MonoBehaviour:
   ballSpawnPower: 1000
   ballSpawnPoint: {fileID: 6767895233038474}
   ballPreFab: {fileID: 1464525422968001401, guid: 0382a57a4c55fe44bb325168d676f219, type: 3}
-  isP2: 0
   isOnBall: 0
   isOnItem: 0
-  isOnBall_p2: 0
-  isOnItem_p2: 0
 --- !u!1 &7151544694881132899
 GameObject:
   m_ObjectHideFlags: 0
@@ -3776,7 +3827,6 @@ SceneRoots:
   - {fileID: 1083640427}
   - {fileID: 6449251167012969519}
   - {fileID: 6067802858857702788}
-  - {fileID: 5922883202342559211}
   - {fileID: 1992193819}
   - {fileID: 923391881}
   - {fileID: 1064817411}
