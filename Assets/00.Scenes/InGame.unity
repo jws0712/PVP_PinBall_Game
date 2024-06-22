@@ -476,7 +476,7 @@ GameObject:
   - component: {fileID: 66167799573672614}
   m_Layer: 0
   m_Name: Left_pin
-  m_TagString: Untagged
+  m_TagString: LeftPin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1113,7 +1113,7 @@ GameObject:
   - component: {fileID: 436476102903911855}
   m_Layer: 0
   m_Name: Right_pin
-  m_TagString: Untagged
+  m_TagString: RightPin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
