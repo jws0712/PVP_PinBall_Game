@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WallObject : MonoBehaviour
+public class WallObject_p2 : MonoBehaviour
 {
     private float xpos;
     private float ypos;
@@ -14,7 +14,7 @@ public class WallObject : MonoBehaviour
     }
     public void WallSet()
     {
-        xpos = Random.Range(-160, 160);
+        xpos = Random.Range(160, 480);
         ypos = Random.Range(-215, 270);
         newposition = new Vector2(xpos, ypos);
         transform.position = newposition;
@@ -28,7 +28,7 @@ public class WallObject : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Ball")
+        if (collision.gameObject.tag == "Ball2")
         {
             StartCoroutine(Co_Wait(0.2f));
         }
