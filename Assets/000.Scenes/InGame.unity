@@ -3497,7 +3497,7 @@ MonoBehaviour:
   p2_rightFlipper: {fileID: 997424997}
   p2_leftFlipper: {fileID: 1431283533}
   flipperPower: 150000
-  isP2: 0
+  isP2: 1
 --- !u!114 &7122262229500576723
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3514,11 +3514,8 @@ MonoBehaviour:
   ballSpawnPower: 1000
   ballSpawnPoint: {fileID: 6767895233038474}
   ballPreFab: {fileID: 1464525422968001401, guid: 0382a57a4c55fe44bb325168d676f219, type: 3}
-  isP2: 0
   isOnBall: 0
   isOnItem: 0
-  isOnBall_p2: 0
-  isOnItem_p2: 0
 --- !u!1 &7151544694881132899
 GameObject:
   m_ObjectHideFlags: 0
