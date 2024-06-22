@@ -12,38 +12,73 @@ public class ChangeFlipper : MonoBehaviour
     public GameObject leftPin = null;
     public GameObject rightPin = null;
 
-    private void Start()
-    {
-
-    }
-
     private void Update()
     {
         leftPin = GameObject.FindWithTag("LeftPin");
         rightPin = GameObject.FindWithTag("RightPin");
+    }
 
-        SetLargeFlipper();
+    private void SetFlipperEvent()
+    {
+        float choseEvent = Random.Range(0, 1);
+
+        switch (choseEvent)
+        {
+            case 0:
+                {
+                    SetSamllFlipper();
+                    break;
+                }
+            case 1:
+                {
+                    SetSamllFlipper();
+                    break;
+                }
+        }
     }
 
     private void SetSamllFlipper()
     {
-        leftPin.transform.localScale = new Vector3(-minScale, 1f, 1f);
-        rightPin.transform.localScale = new Vector3(minScale, 1f, 1f);
+        StartCoroutine(Co_SetSamllFlipper());
     }
 
     private void SetLargeFlipper()
     {
-        leftPin.transform.localScale = new Vector3(-maxScale, 1f, 1f);
-        rightPin.transform.localScale = new Vector3(maxScale, 1f, 1f);
+        StartCoroutine(Co_SetLargeFlipper());
     }
 
-    //private IEnumerator Co_SetSamllFlipper()
-    //{
+    private void SetFlipperSize(float size)
+    {
+        leftPin.transform.localScale = new Vector3(-size, 1f, 1f);
+        rightPin.transform.localScale = new Vector3(size, 1f, 1f);
+    }
 
-    //}
+    private void SetFlipperOriginSize(float size)
+    {
+        leftPin.transform.localScale = new Vector3(-size, 1f, 1f);
+        rightPin.transform.localScale = new Vector3(size, 1f, 1f);
+    }
 
-    //private IEnumerator Co_SetLargeFlipper()
-    //{
+    private IEnumerator Co_SetSamllFlipper()
+    {
+        SetFlipperSize(minScale);
+        yield return new WaitForSeconds(itmeDurationTime);
+        SetFlipperSize(oringScale);
 
-    //}
+    }
+
+    private IEnumerator Co_SetLargeFlipper()
+    {
+        SetFlipperSize(maxScale);
+        yield return new WaitForSeconds(itmeDurationTime);
+        SetFlipperSize(oringScale);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.tag == "Ball")
+        {
+            SetFlipperEvent();
+        }
+    }
 }
