@@ -7,8 +7,10 @@ public class FilpperController : MonoBehaviour
 {
     WebSocket ws;
 
-    [SerializeField] Rigidbody2D rightFlipper, leftFlipper = null;
+    [SerializeField] Rigidbody2D rightFlipper, leftFlipper, p2_rightFlipper, p2_leftFlipper = null;
     [SerializeField] private float flipperPower = default;
+
+    [SerializeField] private bool isP2 = false;
 
     private bool isConnected = false;
 
@@ -25,25 +27,13 @@ public class FilpperController : MonoBehaviour
             Debug.Log("Message from server: " + e.Data);
         };
 
-        ws.OnOpen += (sender, e) =>
-        {
-            Debug.Log("Connection opened");
-            isConnected = true; // Set the flag to true when the connection is open
-        };
-
-        ws.OnClose += (sender, e) =>
-        {
-            Debug.Log("Connection closed");
-            isConnected = false; // Set the flag to false when the connection is closed
-        };
-
         ws.OnError += (sender, e) =>
         {
             Debug.LogError("Error: " + e.Message);
         };
 
         ws.Connect();
-        //연결합니다.
+
         ws.OnMessage += Call;
     }
 
@@ -57,28 +47,50 @@ public class FilpperController : MonoBehaviour
         if (Input.GetKey(KeyCode.J))
         {
             rightFlipper.AddTorque(-(flipperPower));
-            ws.Send("type: my_flip, left:"+ isLeft+", right:"+isRight);
+            //ws.Send("type: my_flip, left:"+ isLeft+", right:"+isRight);
             isRight = true;
         }
         else
         {
             rightFlipper.AddTorque(flipperPower);
             isRight = false;
-            ws.Send("type: my_flip, left:" + isLeft + ", right:" + isRight);
+            //ws.Send("type: my_flip, left:" + isLeft + ", right:" + isRight);
 
         }
         if (Input.GetKey(KeyCode.F))
         {
             leftFlipper.AddTorque(flipperPower);
-            ws.Send("type: my_flip, left:" + isLeft + ", right:" + isRight);
+           // ws.Send("type: my_flip, left:" + isLeft + ", right:" + isRight);
             isLeft = true;
         }
         else
         {
             leftFlipper.AddTorque(-(flipperPower));
             isLeft = false;
-            ws.Send("type: my_flip, left:" + isLeft + ", right:" + isRight);
+            //ws.Send("type: my_flip, left:" + isLeft + ", right:" + isRight);
 
+        }
+
+        if(isP2 == true)
+        {
+            if (Input.GetKey(KeyCode.RightArrow))
+            {
+                p2_rightFlipper.AddTorque(-(flipperPower));
+            }
+            else
+            {
+                p2_rightFlipper.AddTorque(flipperPower);
+
+            }
+            if (Input.GetKey(KeyCode.LeftArrow))
+            {
+                p2_leftFlipper.AddTorque(flipperPower);
+            }
+            else
+            {
+                p2_leftFlipper.AddTorque(-(flipperPower));
+
+            }
         }
     }
 }

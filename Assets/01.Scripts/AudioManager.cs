@@ -34,7 +34,7 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    public void SFXMusic(string name)
+    public void PlaySFX(string name)
     {
         SoundData soundDataArray = Array.Find(sfxClipArray, x => x.name == name);
 

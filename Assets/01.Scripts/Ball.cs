@@ -23,10 +23,13 @@ public class Ball : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        if (collision.gameObject.tag == "Obstacle")
+        {
+            AudioManager.instance.PlaySFX("Bound");
+        }
+
         mat.bounciness -= bouncinessDamage;
         collider.sharedMaterial = mat;
-
-        Debug.Log(collider.sharedMaterial.bounciness);
 
         if (collision.gameObject.layer == LayerMask.NameToLayer("DeadZone"))
         {

@@ -7,7 +7,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] private float spawnDelay = default;
     [SerializeField] private float ballSpawnPower = default;
     [SerializeField] private Transform ballSpawnPoint = null;
+    [SerializeField] private Transform p2_ballSpawnPoint = null;
     [SerializeField] private GameObject ballPreFab = null;
+    [SerializeField] private bool isP2 = false;
 
     public static GameManager Instance;
 
@@ -15,6 +17,11 @@ public class GameManager : MonoBehaviour
     public bool isOnBall = default;
     [HideInInspector]
     public bool isOnItem = false;
+
+    [HideInInspector]
+    public bool isOnBall_p2 = default;
+    [HideInInspector]
+    public bool isOnItem_p2 = false;
 
 
     //ΩÃ±€≈Ê
@@ -32,6 +39,11 @@ public class GameManager : MonoBehaviour
             StartCoroutine(Co_SpawnBall());
             isOnBall = true;
         }
+
+        if (isP2 == true)
+        {
+            GameObject ball_2 = Instantiate(ballPreFab, p2_ballSpawnPoint.position, Quaternion.identity);
+        }
     }
 
     //∞¯¿Ã DeadZoneø° ¥Íæ“¿ª∂ß
@@ -40,6 +52,8 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSeconds(spawnDelay);
 
         GameObject ball = Instantiate(ballPreFab, ballSpawnPoint.position, Quaternion.identity);
+
+
 
         ball.GetComponent<Rigidbody2D>().AddForce(Vector2.up * ballSpawnPower, ForceMode2D.Impulse);
     }

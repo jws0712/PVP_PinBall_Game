@@ -4,7 +4,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using WebSocketSharp;
 
-public class ItemSpawner : MonoBehaviour
+public class ItemSpawner_p2 : MonoBehaviour
 {
     //WebSocket ws;
 
@@ -38,7 +38,7 @@ public class ItemSpawner : MonoBehaviour
 
     private void Update()
     {
-        if (GameManager.Instance.isOnItem == false)
+        if (GameManager.Instance.isOnItem_p2 == false)
         {
             int itemInxdex = Random.Range(0, itemArray.Length);
             int itemSpawnPosIndex = Random.Range(0, itemSpawnPosArray.Length);
@@ -49,7 +49,7 @@ public class ItemSpawner : MonoBehaviour
 
             //ws.Send("type: item," + "item: " + itemArray[itemInxdex].gameObject + "," + "x: " + itemSpawnPosArray[itemSpawnPosIndex].position.x + "," + "y: " + itemSpawnPosArray[itemSpawnPosIndex].position.y);
             
-            GameManager.Instance.isOnItem = true;
+            GameManager.Instance.isOnItem_p2 = true;
         }
     }
 
