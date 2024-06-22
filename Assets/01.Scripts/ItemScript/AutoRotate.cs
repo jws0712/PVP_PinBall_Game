@@ -4,15 +4,14 @@ using UnityEngine;
 
 public class AutoRotate : MonoBehaviour
 {
-    public int Speed;
+    private int rotateSpeed;
     void Start()
     {
-        Speed = 100;
+        rotateSpeed = 100;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        transform.Rotate(0, 0, Speed);
+        transform.Rotate(0, 0, rotateSpeed);
     }
 }
