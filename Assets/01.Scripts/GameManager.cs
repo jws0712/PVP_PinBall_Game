@@ -13,6 +13,8 @@ public class GameManager : MonoBehaviour
 
     [HideInInspector]
     public bool isOnBall = default;
+    [HideInInspector]
+    public bool isOnItem = false;
 
 
     //ΩÃ±€≈Ê

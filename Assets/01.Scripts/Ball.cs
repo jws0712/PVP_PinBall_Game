@@ -21,11 +21,6 @@ public class Ball : MonoBehaviour
         mat.bounciness = oringBounciness;
     }
 
-    private void Update()
-    {
-        
-    }
-
     private void OnCollisionEnter2D(Collision2D collision)
     {
         mat.bounciness -= bouncinessDamage;

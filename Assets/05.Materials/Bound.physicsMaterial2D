@@ -8,4 +8,4 @@ PhysicsMaterial2D:
   m_PrefabAsset: {fileID: 0}
   m_Name: Bound
   friction: 0
-  bounciness: 0.7700002
+  bounciness: 1
