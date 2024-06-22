@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using WebSocketSharp;
 
-public class BlindSet : MonoBehaviour
+public class ItemSet : MonoBehaviour
 {
     WebSocket ws;
     public float xpos;
