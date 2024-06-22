@@ -10,6 +10,8 @@ TagManager:
   - Wall
   - Obstacle
   - Ball2
+  - RightPin2
+  - LeftPin2
   layers:
   - Default
   - TransparentFX
@@ -19,7 +21,7 @@ TagManager:
   - UI
   - DeadZone
   - Wall
-  - 
+  - DeadZone2
   - 
   - 
   - 

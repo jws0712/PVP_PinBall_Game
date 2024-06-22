@@ -17,6 +17,12 @@ public class Ball : MonoBehaviour
 
         if (collision.gameObject.layer == LayerMask.NameToLayer("DeadZone"))
         {
+            if (GameManager.Instance.isOnBall == true)
+            {
+                UIManager.Instance.p2.text = (UIManager.Instance.score_p2 += 1).ToString();
+            }
+            
+
             Destroy(gameObject);
             GameManager.Instance.isOnBall = false;
         }
