@@ -37,7 +37,7 @@ public class ChangeVelocity_p2 : MonoBehaviour
         {
             VelocityChange();
             Destroy(gameObject);
-            GameManager.Instance.isOnItem = false;
+            GameManager1.Instance.isOnItem = false;
         }
     }
 }

@@ -382,12 +382,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemArray:
-  - {fileID: 1017748502965918388, guid: 73c6fc77b803bce43bbe09035ba98137, type: 3}
-  - {fileID: 3971630234728708506, guid: c72ee222208cf154e9bc92a938c178ad, type: 3}
-  - {fileID: 8773370027091666403, guid: 6d2fdc80e2e195a40a9f36c5c1eb8f53, type: 3}
-  - {fileID: 7647327229130207948, guid: 1d386df7fc56f834d8856ab37f9e848c, type: 3}
-  - {fileID: 5840241744806320884, guid: 75f09e78eb2fa414ab17d4fd761d188a, type: 3}
-  - {fileID: 2644174298478846174, guid: d7988060a19498148a8b70d067c30869, type: 3}
+  - {fileID: 1017748502965918388, guid: a346d84a3e7df4147a97e9336115ceb1, type: 3}
+  - {fileID: 3971630234728708506, guid: 63185d1f2ca65a24ebf50382a3dccbda, type: 3}
+  - {fileID: 8773370027091666403, guid: 54cb8fc24b7f9944da84083a5c33dcfb, type: 3}
+  - {fileID: 7647327229130207948, guid: d4f1cddd6d7cd72448d58ec2c2fc4ae9, type: 3}
+  - {fileID: 5840241744806320884, guid: 5c7e632efbe90314a9e4e40feb06c1f0, type: 3}
+  - {fileID: 2644174298478846174, guid: be5297dc3c6c88a4ebd9a4d110b879ef, type: 3}
   itemSpawnPosArray:
   - {fileID: 826301281}
   - {fileID: 1868914715}
@@ -998,7 +998,7 @@ GameObject:
   m_Component:
   - component: {fileID: 572339468}
   - component: {fileID: 572339470}
-  - component: {fileID: 572339469}
+  - component: {fileID: 572339471}
   m_Layer: 0
   m_Name: object_6 (1)
   m_TagString: Obstacle
@@ -1021,59 +1021,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1083640427}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!60 &572339469
-PolygonCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 572339467}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 47, y: 47}
-    newSize: {x: 47, y: 47}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: -3.5, y: 23.5}
-      - {x: -23.5, y: 3.5}
-      - {x: -23.5, y: -3.5}
-      - {x: -3.5, y: -23.5}
-      - {x: 3.5, y: -23.5}
-      - {x: 23.5, y: -3.5}
-      - {x: 23.5, y: 3.5}
-      - {x: 3.5, y: 23.5}
-  m_UseDelaunayMesh: 0
 --- !u!212 &572339470
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1126,6 +1073,41 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!58 &572339471
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 572339467}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 23.5
 --- !u!1 &770911431
 GameObject:
   m_ObjectHideFlags: 0
@@ -2041,7 +2023,7 @@ Transform:
   m_GameObject: {fileID: 1064817408}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -387.70862, y: -96.97099, z: 0}
+  m_LocalPosition: {x: -383, y: -92, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3280,12 +3262,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   musicSource: {fileID: 66827160}
   sfxSource: {fileID: 213427433}
-  musicClipArray: []
+  musicClipArray:
+  - name: BackGround
+    clip: {fileID: 8300000, guid: b4309faf9557d7540b477fd869be9d6a, type: 3}
   sfxClipArray:
   - name: Bound
     clip: {fileID: 8300000, guid: c380470ae93a37946ba2fd8de8de588f, type: 3}
-  - name: BackGround
-    clip: {fileID: 8300000, guid: b4309faf9557d7540b477fd869be9d6a, type: 3}
 --- !u!1 &1860356786
 GameObject:
   m_ObjectHideFlags: 0
@@ -3655,7 +3637,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2090769696}
   - component: {fileID: 2090769695}
-  - component: {fileID: 2090769694}
+  - component: {fileID: 2090769697}
   m_Layer: 0
   m_Name: object_6
   m_TagString: Obstacle
@@ -3663,59 +3645,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!60 &2090769694
-PolygonCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2090769693}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 47, y: 47}
-    newSize: {x: 47, y: 47}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: -3.5, y: 23.5}
-      - {x: -23.5, y: 3.5}
-      - {x: -23.5, y: -3.5}
-      - {x: -3.5, y: -23.5}
-      - {x: 3.5, y: -23.5}
-      - {x: 23.5, y: -3.5}
-      - {x: 23.5, y: 3.5}
-      - {x: 3.5, y: 23.5}
-  m_UseDelaunayMesh: 0
 --- !u!212 &2090769695
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3783,6 +3712,41 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1506658244}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &2090769697
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2090769693}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 23.5
 --- !u!1 &2115293635
 GameObject:
   m_ObjectHideFlags: 0
@@ -3810,7 +3774,7 @@ Transform:
   m_GameObject: {fileID: 2115293635}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -393.89038, y: -96.97099, z: 0}
+  m_LocalPosition: {x: -386, y: -88, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4705,7 +4669,7 @@ MonoBehaviour:
   leftFlipper: {fileID: 1227304327276588875}
   p2_rightFlipper: {fileID: 997424997}
   p2_leftFlipper: {fileID: 1431283533}
-  flipperPower: 150000
+  flipperPower: 1000000
   isP2: 1
 --- !u!114 &7122262229500576723
 MonoBehaviour:

@@ -33,7 +33,7 @@ public class StopBall_p2 : MonoBehaviour
         {
             LoackBall();
             Destroy(gameObject);
-            GameManager.Instance.isOnItem = false;
+            GameManager1.Instance.isOnItem = false;
         }
     }
 }

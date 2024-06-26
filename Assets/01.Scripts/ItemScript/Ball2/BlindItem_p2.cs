@@ -21,7 +21,7 @@ public class BlindItemp2 : MonoBehaviour
         {
             BlindSet();
             Destroy(gameObject);
-            GameManager.Instance.isOnItem = false;
+            GameManager1.Instance.isOnItem = false;
         }
     }
 }

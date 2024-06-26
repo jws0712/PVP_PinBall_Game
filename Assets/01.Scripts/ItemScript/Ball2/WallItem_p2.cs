@@ -15,7 +15,7 @@ public class WallItem_p2 : MonoBehaviour
         if (collision.gameObject.tag == "Ball2")
         {
             Instantiate(wall, transform.position, Quaternion.identity);
-            GameManager.Instance.isOnItem = false;
+            GameManager1.Instance.isOnItem = false;
             Destroy(gameObject);
         }
     }

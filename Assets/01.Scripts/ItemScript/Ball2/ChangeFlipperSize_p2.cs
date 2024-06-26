@@ -93,7 +93,7 @@ public class ChangeFlipperSize_p2 : MonoBehaviour
         {
             SetFlipperEvent();
             Destroy(gameObject);
-            GameManager.Instance.isOnItem = false;
+            GameManager1.Instance.isOnItem = false;
         }
     }
 }

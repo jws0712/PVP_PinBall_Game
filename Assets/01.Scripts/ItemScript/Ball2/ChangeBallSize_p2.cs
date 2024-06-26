@@ -36,7 +36,7 @@ public class ChangeBallSize_p2 : MonoBehaviour
         {
             SetBallSize();
             Destroy(gameObject);
-            GameManager.Instance.isOnItem = false;
+            GameManager1.Instance.isOnItem = false;
         }
     }
 }
